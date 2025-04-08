@@ -3,12 +3,15 @@
 using Spectre.Console;
 using static libraryMng.Enums;
 
+
 namespace libraryMng
 {
     internal class UserInterface
     {
 
-        internal static void MainMenu()
+        private BookController BooksController = new BookController();
+
+        internal void MainMenu()
         {
             while (true)
             {
@@ -21,13 +24,13 @@ namespace libraryMng
                 switch (choice)
                 {
                     case MenuOption.Viewbooks:
-                        BookController.ViewBooks();
+                        BooksController.ViewBooks();
                         break;
                     case MenuOption.AddBook:
-                        BookController.AddBook();
+                        BooksController.AddBook();
                         break;
                     case MenuOption.DeleteBook:
-                        BookController.DeleteBook();
+                        BooksController.DeleteBook();
                         break;
                 }
             }

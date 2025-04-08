@@ -1,3 +1,4 @@
 ﻿using libraryMng;
+UserInterface userInterface = new();
 
-UserInterface.MainMenu();
+userInterface.MainMenu();
